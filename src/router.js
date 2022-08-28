@@ -1,20 +1,18 @@
-import { useState } from "react";
-import { Navigate, useRoutes } from "react-router-dom";
-import TutorshipPage from "./pages/TutorshipPage";
+
+import { useRoutes } from "react-router-dom";
+import BankPage from "./pages/BankPage";
 
 export const AppRouter = () => {
-  const [title, setTitle] = useState("Tutorías");
-  const [snackbar, setSnackbar] = useState({ open: false, message: "" });
+
 
   return useRoutes([
     {
-      path: "/tuto/",
-
+      path: "/",
       children: [
         {
-          path: "tutorship",
+          path: "bank",
           element: (
-            <TutorshipPage />
+            <BankPage />
           ),
         },
        
